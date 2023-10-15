@@ -8,6 +8,6 @@
 
 <h4>Data pipeline</h4>
 <div align="center">
-  <img src="https://i.ibb.co/p25QKXb/etl-pipeline.png" alt="etl-pipeline" border="0" width="800px">
+  <img src="https://i.ibb.co/t3pKZJt/Picture1.png" alt="Picture1" border="0" width="800px">
 </div>
 
