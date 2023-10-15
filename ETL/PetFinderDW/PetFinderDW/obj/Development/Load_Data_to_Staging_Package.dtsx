@@ -1,0 +1,1323 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/13/2023 4:31:53 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-AVCREQP"
+  DTS:CreatorName="DESKTOP-AVCREQP\trung"
+  DTS:DTSID="{F0886CE4-45A4-4754-A2F6-DC271E741CFA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{935F7FA1-01A1-42FC-8190-56AD59747EF3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-AVCREQP\SQLSERVER2022.PetFinderStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EACC40B1-9450-4C58-A5AC-B4235DEF1469}"
+      DTS:ObjectName="DESKTOP-AVCREQP\SQLSERVER2022.PetFinderStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-AVCREQP\SQLSERVER2022;Initial Catalog=PetFinderStaging;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{62F1FAA3-920A-4A06-B4C1-6113B6376813}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="B:\Data_Funix\Assignments\Course2\DEP302x_asm1_anhltfx27997@funix.edu.vn\Dataset\PetFinder.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PetID"
+              DTS:DTSID="{18F33524-D285-4E37-809C-A072FFEE701B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type"
+              DTS:DTSID="{C7AA6EEC-0282-4182-A391-BC826D4B3EBE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{295C7972-5515-4436-A0D4-EB8E0FB43CE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Breed1"
+              DTS:DTSID="{612C4340-7768-49A5-8B9F-E367360D31DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Breed2"
+              DTS:DTSID="{29E9B1E6-57D2-4D35-950A-96300E121165}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{4735233E-B352-461D-8474-6516106A7761}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Color1"
+              DTS:DTSID="{2270D0F1-96BD-41A3-8C8D-129B01AC6E39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Color2"
+              DTS:DTSID="{B0FEE2F5-26DB-42F9-BF11-6A82C01DEF76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Color3"
+              DTS:DTSID="{4BDAEB23-3DF9-45DB-8DD6-9FF105C7B2E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MaturitySize"
+              DTS:DTSID="{327D07D8-08F4-4D76-BA21-3EB934051C3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FurLength"
+              DTS:DTSID="{CA15AE59-B01B-4EE6-B685-6CA03978769B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vaccinated"
+              DTS:DTSID="{C833483F-AE58-4956-BDAC-569B94B8BE85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dewormed"
+              DTS:DTSID="{4543028E-493C-4D64-81C1-A6A17B9EE836}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sterilized"
+              DTS:DTSID="{007783AD-D3DB-4B84-B59A-074E8EC303EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Health"
+              DTS:DTSID="{414DC8F6-70FD-4B94-834F-EF9113E75620}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity"
+              DTS:DTSID="{BAD96A1B-9FA9-4E6A-864B-88FEB1E3C191}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fee"
+              DTS:DTSID="{6880EAB6-F4F3-441E-9845-A3C52E397F76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{F74DB976-489E-4AD5-82FA-F7C40B0B4E64}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RescuerID"
+              DTS:DTSID="{7C693790-B158-4718-9C69-1376A86F114D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Fet Finder DW Staging Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D43ABE27-7ADC-41DC-AA3D-653F33F1B46C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fet Finder DW Staging Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Fet Finder DW Staging Task\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fet Finder DW Staging Task\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[PetID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PetID]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[PetID]"
+                      name="PetID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Breed1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Breed1]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Breed1]"
+                      name="Breed1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Breed2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Breed2]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Breed2]"
+                      name="Breed2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Color1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color1]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Color1]"
+                      name="Color1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Color2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color2]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Color2]"
+                      name="Color2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Color3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color3]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Color3]"
+                      name="Color3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[MaturitySize]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MaturitySize]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[MaturitySize]"
+                      name="MaturitySize"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[FurLength]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FurLength]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[FurLength]"
+                      name="FurLength"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vaccinated]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vaccinated]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vaccinated]"
+                      name="Vaccinated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Dewormed]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dewormed]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Dewormed]"
+                      name="Dewormed"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sterilized]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sterilized]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sterilized]"
+                      name="Sterilized"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Health]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Health]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Health]"
+                      name="Health"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Fee]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Fee]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Fee]"
+                      name="Fee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      length="50"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[RescuerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RescuerID]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[RescuerID]"
+                      name="RescuerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PetID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PetID" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Breed1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Breed1" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Breed2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Breed2" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Color1" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Color2" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Color3" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MaturitySize]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MaturitySize" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FurLength]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FurLength" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vaccinated]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Vaccinated" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dewormed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Dewormed" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sterilized]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sterilized" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Health]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Health" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Fee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Fee" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RescuerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="RescuerID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Pet Finder DW Staging"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StagingPetData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-AVCREQP\SQLSERVER2022.PetFinderStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-AVCREQP\SQLSERVER2022.PetFinderStaging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[PetID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PetID"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[PetID]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[PetID]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Type"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Age]"
+                      cachedDataType="i4"
+                      cachedName="Age"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Breed1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Breed1"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Breed1]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Breed1]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Breed2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Breed2"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Breed2]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Breed2]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Color1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Color1"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Color1]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Color1]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Color2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Color2"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Color2]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Color2]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Color3]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Color3"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Color3]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Color3]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[MaturitySize]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MaturitySize"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[MaturitySize]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[MaturitySize]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[FurLength]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FurLength"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[FurLength]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[FurLength]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Vaccinated]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Vaccinated"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Vaccinated]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vaccinated]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Dewormed]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Dewormed"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Dewormed]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Dewormed]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Sterilized]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sterilized"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Sterilized]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sterilized]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Health]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Health"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Health]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Health]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Quantity"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[Fee]"
+                      cachedDataType="i4"
+                      cachedName="Fee"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Fee]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Fee]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].Columns[RescuerID]"
+                      cachedDataType="i4"
+                      cachedName="RescuerID"
+                      externalMetadataColumnId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[RescuerID]"
+                      lineageId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[RescuerID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[PetKey]"
+                      dataType="i4"
+                      name="PetKey" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[PetID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="PetID" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      dataType="i4"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Breed1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Breed1" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Breed2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Breed2" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Color1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Color1" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Color2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Color2" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Color3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Color3" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[MaturitySize]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="MaturitySize" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[FurLength]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="FurLength" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Vaccinated]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Vaccinated" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Dewormed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Dewormed" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Sterilized]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Sterilized" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Health]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      name="Health" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[Fee]"
+                      dataType="i4"
+                      name="Fee" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input].ExternalColumns[RescuerID]"
+                      dataType="i4"
+                      name="RescuerID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Fet Finder DW Staging Task.Paths[Flat File Source Output]"
+              endId="Package\Fet Finder DW Staging Task\Pet Finder DW Staging.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Fet Finder DW Staging Task\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Staging Data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{7941A308-3388-48D3-A204-E5AC44043CEF}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Staging Data"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EACC40B1-9450-4C58-A5AC-B4235DEF1469}"
+          SQLTask:SqlStatementSource="DELETE FROM [dbo].[StagingPetData];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{D3868535-E200-4521-B418-75B7DC03091D}"
+      DTS:From="Package\Truncate Staging Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Fet Finder DW Staging Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="210,42"
+          Id="Package\Fet Finder DW Staging Task"
+          TopLeft="413,215" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Truncate Staging Data"
+          TopLeft="420,98" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="515.25,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75"
+              Start="0,0"
+              End="0,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Fet Finder DW Staging Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Fet Finder DW Staging Task\Pet Finder DW Staging"
+          TopLeft="432,300" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Fet Finder DW Staging Task\Flat File Source"
+          TopLeft="444.5,116.5" />
+        <EdgeLayout
+          Id="Package\Fet Finder DW Staging Task.Paths[Flat File Source Output]"
+          TopLeft="522.25,158.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,141.5"
+              Start="0,0"
+              End="0,134">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,134" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fet Finder DW Staging Task\Pet Finder DW Staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
